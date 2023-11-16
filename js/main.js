@@ -9,7 +9,7 @@ function getDrink(){
         .then(res => res.json()) // parse response as JSON
         .then(data => {
          console.log(data.drinks)
-            const item = new DrinkInfo(data.drinks[])
+            const item = new DrinkInfo(data.drinks)
             item.testCall()
             data.drinks.forEach(obj => console.log(obj.name))
             document.querySelector('h3').innerText = data.drinks[0].strDrink
