@@ -10,25 +10,45 @@
 		<!-- external CSS link -->
 		<link rel="stylesheet" href="css/normalize.css">
 		<link rel="stylesheet" href="css/style.css">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Agbalumo&display=swap" rel="stylesheet">
 	</head>
 	<body>
-
-		<h1>Which Cocktail?</h1>
-		<input type="text" name="" value="">
-		<button type="button" name="button">Get Cocktail</button>
-
-		<h2>Name</h2>
-		<img src="" alt="">
-		<h3>Ingrediants</h3>
-		<ol>
-			<li class="olLi"></li>
-			<li class="olLi"></li>
-		</ol>
-		<h4>Instructions</h4>
-		<ul>
-			<li></li>
-		</ul>
-
+		<header>
+			<h1>Which Cocktail?</h1>
+			<input type="search" name="" value="">
+			<button type="button" name="button">Get Cocktail</button>
+		</header>
+		<section class="section-container">
+			<section id="left-column">
+				<section class="item">
+					<h3>Name</h3>
+				</section>
+				<section class="item">
+					<section class="img-container">
+						<section class="container">
+							<img src="" alt="pic of cocktail"/>
+						</section>
+					</section>
+				</section>
+			</section>
+			<section id="right-column">
+					<section class="item">
+							<h3>Ingredients</h3>
+							<table id="ingredient-table">
+								<tr>
+									<th>Ingredient</th>
+								</tr>
+							</table>
+					</section>
+					<section class="item">
+						<h4>Instructions</h4>
+						<span></span>
+					</section>
+			</section>
+		</section>
+		
 		<script type="text/javascript" src="js/main.js"></script>
 	</body>
 </html>
