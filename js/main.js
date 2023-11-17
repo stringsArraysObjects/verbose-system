@@ -8,33 +8,36 @@ function getDrink(){
     fetch(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${drink}`)
         .then(res => res.json()) // parse response as JSON
         .then(data => {
+            
          console.log(data.drinks)
-            const item = new DrinkInfo(data.drinks)
-            item.testCall()
-            data.drinks.forEach(obj => console.log(obj.name))
+           let drinkID = data.drinks[0].idDrink
+        //    let lastThreeNumsOfDrinkID = drinkID.slice(2)
+            console.log(drinkID)
+            // data.drinks.forEach(obj => console.log(obj.name))
             document.querySelector('h3').innerText = data.drinks[0].strDrink
             document.querySelector('img').src = data.drinks[0].strDrinkThumb
             document.querySelector('span').innerText = data.drinks[0].strInstructions
-            document.querySelector('table').innerText = data.drinks[0].strIngredient1
-        
+           
+       
+            const DRINKINGREDIENTS_URL = (`https://www.thecocktaildb.com/api/json/v1/1/lookup.php?iid=${drinkID}`)
+            
+            fetch(DRINKINGREDIENTS_URL)
+            .then(res => res.json())
+            .then(data => {
+                console.log(data)
+                document.querySelector('.ingredients').innerText
+         
+             })
+            
           
         })
         .catch(err => {
             console.log(`error ${err}`)
         });
         
-}
-    class DrinkInfo {
-        constructor(drinkData){
-            this.name = drinkData.strDrink
-            this.ingredients = drinkData.strIngredient
-            this.image = drinkData.strDrinkThumb
-            this.instructions = drinkData.strInstructions
-        }
-
-        testCall(){
-            console.log(this.ingredients)
-        }
 
     }
+     
+
+    
 
