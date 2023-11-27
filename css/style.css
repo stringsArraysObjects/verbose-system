@@ -15,6 +15,9 @@ img{
   display: block;
   margin: 0 auto;
 }
+/* .hidden{
+  display: none;
+} */
 
 header{
   margin-bottom: 30px;
@@ -27,13 +30,17 @@ button{
   background-color: rgb(235, 224, 214);
   display: block;
 }
+ul{
+  list-style: none;
+}
+
 .section-container{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   border: 5px solid orange;
-  padding-left: 20vw;
-  padding-right: 20vw;
+  padding-left: 5vw;
+  padding-right: 5vw;
 }
 .column{
   border: 5px solid orange;
@@ -41,15 +48,11 @@ button{
 h3{
   text-decoration: underline;
 }
-#right-column{
-  text-align: center;
+#right-column, #left-column{
+  text-align:justify;
+  padding-left: 5vw; 
 }
-table{
-  margin: 20px auto;
-}
-table, th, td {
-  background-color:rgb(235, 224, 214)
-}
+
 /******************************************
 /* ADDITIONAL STYLES
 /*******************************************/
