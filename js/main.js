@@ -1,15 +1,10 @@
-
 document.querySelector('button').addEventListener('click', getDrink)
-
-
 
 function getDrink(){
     let drink = document.querySelector('input').value
     
-    
-    
     fetch(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s&=${drink}`)
-    .then(res => res.json()) // parse response as JSON
+    .then(res => res.json())
     .then(data => {
            console.log(data.drinks)
            const elements = document.querySelectorAll('.hidden')
@@ -25,9 +20,6 @@ function getDrink(){
                document.querySelector('#ingredients6').innerText = data.drinks[0].strIngredient6
                document.querySelector('#ingredients7').innerText = data.drinks[0].strIngredient7
                document.querySelector('#ingredients8').innerText = data.drinks[0].strIngredient8
-         
-
-           
             
         })
         .catch(err => {
