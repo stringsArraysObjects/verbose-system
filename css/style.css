@@ -15,9 +15,9 @@ img{
   display: block;
   margin: 0 auto;
 }
-/* .hidden{
+.hidden{
   display: none;
-} */
+}
 
 header{
   margin-bottom: 30px;
@@ -47,6 +47,7 @@ ul{
 }
 h3{
   text-decoration: underline;
+  
 }
 #right-column, #left-column{
   text-align:justify;
