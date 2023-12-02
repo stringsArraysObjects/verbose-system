@@ -15,9 +15,9 @@ img{
   display: block;
   margin: 0 auto;
 }
-.hidden{
+/* .hidden{
   display: none;
-}
+} */
 
 header{
   margin-bottom: 30px;
