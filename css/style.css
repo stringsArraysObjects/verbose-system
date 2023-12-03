@@ -5,55 +5,30 @@
 /******************************************
 /* LAYOUT
 /*******************************************/
-html {
-  border: 2px solid rgb(255, 136, 0);
-  font-size: 2rem;
-  font-family: 'Agbalumo', 'Arial Narrow', sans-serif;
-  background: linear-gradient(rgb(168, 173, 173), rgb(93, 94, 95));
-}
-img{
-  display: block;
-  margin: 0 auto;
-}
-/* .hidden{
-  display: none;
-} */
+
 
 header{
-  margin-bottom: 30px;
+
   text-align: center;
-  border: 5px solid orange;
+}
+
+body{
+  background-color: rgb(83, 83, 81);
+  font-size: 2rem;
+  font-family: 'Agbalumo', 'Arial Narrow', sans-serif;
 }
 button{
-  font-size: 1.1rem;
+  font-size: 1.7rem;
   margin: auto;
   background-color: rgb(235, 224, 214);
   display: block;
 }
+h3{
+  text-decoration: underline;
+}
 ul{
   list-style: none;
 }
-
-.section-container{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  border: 5px solid orange;
-  padding-left: 5vw;
-  padding-right: 5vw;
-}
-.column{
-  border: 5px solid orange;
-}
-h3{
-  text-decoration: underline;
-  
-}
-#right-column, #left-column{
-  text-align:justify;
-  padding-left: 5vw; 
-}
-
 /******************************************
-/* ADDITIONAL STYLES
+/* ADDITIONALSTYLES
 /*******************************************/
