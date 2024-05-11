@@ -21,9 +21,9 @@ function getDrink(){
            document.querySelector('#ingredients7').innerText = data.drinks[0].strIngredient7
            document.querySelector('#ingredients8').innerText = data.drinks[0].strIngredient8
            
-           data.drinks.forEach(obj => {
-                console.log(obj.strDrink)
-            })
+            // data.drinks.forEach(obj => {
+            // document.querySelector('h4').innerText = obj.strDrink (this needs work)
+            // })
         })
         .catch(err => {
             console.log(`error ${err}`)
