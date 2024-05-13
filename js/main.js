@@ -8,21 +8,29 @@ function getDrink(){
     fetch(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${drink}`)
     .then(res => res.json())
     .then(data => {
-           console.log(data.drinks)
-           document.querySelector('h2').innerText = data.drinks[0].strDrink
-           document.querySelector('#newUserInput').src = data.drinks[0].strDrinkThumb
-           document.querySelector('p').innerText = data.drinks[0].strInstructions
-           document.querySelector('#ingredients1').innerText = data.drinks[0].strIngredient1
-           document.querySelector('#ingredients2').innerText = data.drinks[0].strIngredient2
-           document.querySelector('#ingredients3').innerText = data.drinks[0].strIngredient3
-           document.querySelector('#ingredients4').innerText = data.drinks[0].strIngredient4
-           document.querySelector('#ingredients5').innerText = data.drinks[0].strIngredient5
-           document.querySelector('#ingredients6').innerText = data.drinks[0].strIngredient6
-           document.querySelector('#ingredients7').innerText = data.drinks[0].strIngredient7
-           document.querySelector('#ingredients8').innerText = data.drinks[0].strIngredient8
+            // data.drinks.forEach(data.drinks => {
+                
+                console.log(data.drinks)
+                for(let i = 0; i < data.drinks.length; i++ ){
+
+                    document.querySelector('.drinkNames').innerText += data.drinks[i].strDrink
+                    document.querySelector('#newUserInput').src = data.drinks[i].strDrinkThumb
+                    document.querySelector('p').innerText = data.drinks[i].strInstructions
+                    document.querySelector('#ingredients1').innerText = data.drinks[i].strIngredient1
+                    document.querySelector('#ingredients2').innerText = data.drinks[i].strIngredient2
+                    document.querySelector('#ingredients3').innerText = data.drinks[i].strIngredient3
+                    document.querySelector('#ingredients4').innerText = data.drinks[i].strIngredient4
+                    document.querySelector('#ingredients5').innerText = data.drinks[i].strIngredient5
+                    document.querySelector('#ingredients6').innerText = data.drinks[i].strIngredient6
+                    document.querySelector('#ingredients7').innerText = data.drinks[i].strIngredient7
+                    document.querySelector('#ingredients8').innerText = data.drinks[i].strIngredient8
+                
+                }
+
+            // });
            
-            // data.drinks.forEach(obj => {
-            // document.querySelector('h4').innerText = obj.strDrink (this needs work)
+            // data.drinks.forEach(data.drinks => {
+            // document.querySelector('h4').innerText = data.drinks.strDrink (this needs work)
             // })
         })
         .catch(err => {
@@ -31,6 +39,37 @@ function getDrink(){
         
 
 }
+
+// function getDrink(){
+//     let drink = document.querySelector('input').value
+//     hideHeadings.classList.toggle('hidden')
+    
+//     fetch(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${drink}`)
+//     .then(res => res.json())
+//     .then(data => {
+//            console.log(data.drinks)
+//            document.querySelector('h2').innerText = data.drinks.strDrink
+//            document.querySelector('#newUserInput').src = data.drinks.strDrinkThumb
+//            document.querySelector('p').innerText = data.drinks.strInstructions
+//            document.querySelector('#ingredients1').innerText = data.drinks.strIngredient1
+//            document.querySelector('#ingredients2').innerText = data.drinks.strIngredient2
+//            document.querySelector('#ingredients3').innerText = data.drinks.strIngredient3
+//            document.querySelector('#ingredients4').innerText = data.drinks.strIngredient4
+//            document.querySelector('#ingredients5').innerText = data.drinks.strIngredient5
+//            document.querySelector('#ingredients6').innerText = data.drinks.strIngredient6
+//            document.querySelector('#ingredients7').innerText = data.drinks.strIngredient7
+//            document.querySelector('#ingredients8').innerText = data.drinks.strIngredient8
+           
+//             // data.drinks.forEach(obj => {
+//             // document.querySelector('h4').innerText = obj.strDrink (this needs work)
+//             // })
+//         })
+//         .catch(err => {
+//             console.log(`error ${err}`)
+//         });
+        
+
+// }
 
 
     
