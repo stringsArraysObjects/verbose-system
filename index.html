@@ -23,6 +23,44 @@
 			<input type="search" name="" value="">
 			<button type="button" name="button">Enter</button>
 		</header>
+		<div id="carouselExampleCaptions" class="carousel slide">
+			<div class="carousel-indicators">
+			  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+			  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+			  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+			</div>
+			<div class="carousel-inner">
+			  <div class="carousel-item active">
+				<img class="cocktailPic" src="..." class="d-block w-100" alt="...">
+				<div class="carousel-caption d-none d-md-block">
+				  <h5 class="drinkNames"></h5>
+				  <p></p>
+				</div>
+			  </div>
+			  <div class="carousel-item">
+				<img class="cocktailPic" src="..." class="d-block w-100" alt="...">
+				<div class="carousel-caption d-none d-md-block">
+				  <h5 class="drinkNames"></h5>
+				  <p></p>
+				</div>
+			  </div>
+			  <div class="carousel-item">
+				<img class="cocktailPic" src="..." class="d-block w-100" alt="...">
+				<div class="carousel-caption d-none d-md-block">
+				  <h5 class="drinkNames"></h5>
+				  <p></p>
+				</div>
+			  </div>
+			</div>
+			<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+			  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+			  <span class="visually-hidden">Previous</span>
+			</button>
+			<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+			  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+			  <span class="visually-hidden">Next</span>
+			</button>
+		  </div>
 		<section class="container text-center">
 			<div class="row justify-content-evenly">
 				<div class="col">
@@ -31,8 +69,8 @@
 						<li class="drinkNames"></li>
 						<li class="drinkNames"></li>
 					</ul>
-					<img id="newUserInput" class="rounded img-fluid" src="#" alt=""/>
 				</div>
+				<!-- <img class="cocktailPic" class="rounded img-fluid" src="#" alt=""/> -->
 			</div>
 			<div class="col">
 						<div class="p-1 text-info-emphasis bg-info-subtle border border-info-subtle rounded-1">
@@ -50,10 +88,11 @@
 						</div>
 					   <div class="p-1 text-info-emphasis bg-info-subtle border border-info-subtle rounded-1">
 						<h3 class="hidden">Instructions</h3>
-						<p></p>
+						<p class="drinkRecipe"></p>
 					  </div>
 					</div>
 		</section>
+
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" 
 		integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" 
 		crossorigin="anonymous">
