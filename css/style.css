@@ -17,6 +17,9 @@ body{
   font-size: 2rem;
   font-family: 'Agbalumo', 'Arial Narrow', sans-serif;
 }
+section{
+  align-items: center;
+}
 button{
   font-size: 1.7rem;
   margin: auto;
@@ -29,6 +32,7 @@ h3{
 ul, ol{
   list-style: none;
 }
+
 /******************************************
 /* ADDITIONALSTYLES
 /*******************************************/

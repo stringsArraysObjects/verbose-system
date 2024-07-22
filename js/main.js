@@ -1,6 +1,5 @@
 document.querySelector('button').addEventListener('click', getDrink)
-const hideHeadings = document.querySelector('h3')   
-
+const hideHeadings = document.querySelector('section')   
 function getDrink(){
     let drink = document.querySelector('input').value
     hideHeadings.classList.toggle('hidden')
@@ -25,10 +24,6 @@ function getDrink(){
                   //   document.querySelector('#ingredients7').innerText = data.drinks[i].strIngredient7
                   //   document.querySelector('#ingredients8').innerText = data.drinks[i].strIngredient8
                 }
-
-              
-                
-                
 
             // });
                 })
