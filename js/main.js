@@ -40,38 +40,3 @@ function getDrink(){
         
 
 }
-
-// function getDrink(){
-//     let drink = document.querySelector('input').value
-//     hideHeadings.classList.toggle('hidden')
-    
-//     fetch(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${drink}`)
-//     .then(res => res.json())
-//     .then(data => {
-//            console.log(data.drinks)
-//            document.querySelector('h2').innerText = data.drinks.strDrink
-//            document.querySelector('#newUserInput').src = data.drinks.strDrinkThumb
-//            document.querySelector('p').innerText = data.drinks.strInstructions
-//            document.querySelector('#ingredients1').innerText = data.drinks.strIngredient1
-//            document.querySelector('#ingredients2').innerText = data.drinks.strIngredient2
-//            document.querySelector('#ingredients3').innerText = data.drinks.strIngredient3
-//            document.querySelector('#ingredients4').innerText = data.drinks.strIngredient4
-//            document.querySelector('#ingredients5').innerText = data.drinks.strIngredient5
-//            document.querySelector('#ingredients6').innerText = data.drinks.strIngredient6
-//            document.querySelector('#ingredients7').innerText = data.drinks.strIngredient7
-//            document.querySelector('#ingredients8').innerText = data.drinks.strIngredient8
-           
-//             // data.drinks.forEach(obj => {
-//             // document.querySelector('h4').innerText = obj.strDrink (this needs work)
-//             // })
-//         })
-//         .catch(err => {
-//             console.log(`error ${err}`)
-//         });
-        
-
-// }
-
-
-    
-
