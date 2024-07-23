@@ -13,7 +13,7 @@ function getDrink(){
                 for(let element in data.drinks){
                     
                         document.querySelector('h2').innerText = data.drinks[element].strDrink 
-                        document.querySelector('.cocktailPic').src += data.drinks[element].strDrinkThumb
+                        document.querySelector('.cocktailPic').src = data.drinks[element].strDrinkThumb
                         document.querySelector('.drinkInstructions').innerText = data.drinks[element].strInstructions
                         document.querySelector('#ingredients1').innerText = data.drinks[element].strIngredient1 
                         document.querySelector('#ingredients2').innerText = data.drinks[element].strIngredient2
