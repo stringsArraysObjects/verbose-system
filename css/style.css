@@ -17,8 +17,9 @@ body{
   font-size: 2rem;
   font-family: 'Agbalumo', 'Arial Narrow', sans-serif;
 }
-section{
-  align-items: center;
+section {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
 }
 button{
   font-size: 1.7rem;
@@ -38,4 +39,9 @@ ul, ol{
 /*******************************************/
 .hidden{
   display: none;
+}
+@media screen and (min-width: 900px) {
+  section{
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
