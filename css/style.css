@@ -8,7 +8,6 @@
 
 
 header{
-
   text-align: center;
 }
 
@@ -16,6 +15,8 @@ body{
   background-color: rgb(83, 83, 81);
   font-size: 2rem;
   font-family: 'Agbalumo', 'Arial Narrow', sans-serif;
+  color:antiquewhite;
+  text-shadow: 3px 3px 3px rgb(63, 63, 61);
 }
 section {
   display: grid;
@@ -28,13 +29,17 @@ button{
   background-color: rgb(235, 224, 214);
   display: block;
 }
-h3{
+/* h3{
   text-decoration: underline;
-}
+  text-shadow: 3px 3px 3px rgb(63, 63, 61);
+
+} */
 ul, ol{
   list-style: none;
 }
-
+img {
+  border-radius: 5%;
+}
 /******************************************
 /* ADDITIONALSTYLES
 /*******************************************/
@@ -44,5 +49,13 @@ ul, ol{
 @media screen and (min-width: 900px) {
   section{
     grid-template-columns: repeat(3, 1fr);
+  
+  }
+  .col{
+    /* box-shadow: inset 5px 5px rgb(85, 96, 100); */
+    box-shadow: inset 5px 5px rgb(63, 63, 61);
+    padding-top: 2%;
+    padding-left: 5%;
+    border-radius: 5%;
   }
 }
