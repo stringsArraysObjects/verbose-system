@@ -1,3 +1,14 @@
+const skeleton =  document.querySelector('.skeleton')
+
+document.addEventListener("readystatechange", (event) => {
+        if (event.target.readyState === "loading") {
+            document.body.style = "background-color: #b6e72e"
+          initLoader();
+        } else if (event.target.readyState === "complete") {
+            skeleton.remove()
+        }
+});
+
 document.querySelector('button').addEventListener('click', getDrink)
 const hideHeadings = document.querySelector('section')   
 function getDrink(){
