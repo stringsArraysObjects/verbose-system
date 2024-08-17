@@ -4,7 +4,6 @@ const hideHeadings = document.querySelector('section')
 document.addEventListener("readystatechange", (event) => {
         if (event.target.readyState === "loading") {
             document.body.style = "background-color: #b6e72e"
-          initLoader();
         } else if (event.target.readyState === "complete") {
             skeleton.remove()
              getData()
