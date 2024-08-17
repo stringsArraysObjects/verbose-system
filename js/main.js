@@ -22,20 +22,32 @@ async function getDrink() {
       }
   
       const data = await response.json();
-      for(let element in data.drinks){
-                    
-        document.querySelector('h2').innerText = data.drinks[element].strDrink 
-        document.querySelector('.cocktailPic').src = data.drinks[element].strDrinkThumb
-        document.querySelector('.drinkInstructions').innerText = data.drinks[element].strInstructions
-        document.querySelector('#ingredients1').innerText = data.drinks[element].strIngredient1 
-        document.querySelector('#ingredients2').innerText = data.drinks[element].strIngredient2
-        document.querySelector('#ingredients3').innerText = data.drinks[element].strIngredient3
-        document.querySelector('#ingredients4').innerText = data.drinks[element].strIngredient4
-        document.querySelector('#ingredients5').innerText = data.drinks[element].strIngredient5
-        document.querySelector('#ingredients6').innerText = data.drinks[element].strIngredient6
-       document.querySelector('#ingredients7').innerText = data.drinks[element].strIngredient7
-       document.querySelector('#ingredients8').innerText = data.drinks[element].strIngredient8
-}
+
+        if (drink === 'rum' || drink === 'vodka'){
+            let options = '<option>Select</option>'
+            const select = document.createElement("select")
+            const el = document.querySelector('#search')
+            for(let element in data.drinks){
+                options += '<option>' + data.drinks[element].strDrink + '</option>' 
+            }
+            select.innerHTML = options
+            el.replaceWith(select)
+            
+            console.log(options)
+        }
+        for(let element in data.drinks){
+            document.querySelector('h2').innerText = data.drinks[element].strDrink 
+            document.querySelector('.cocktailPic').src = data.drinks[element].strDrinkThumb
+            document.querySelector('.drinkInstructions').innerText = data.drinks[element].strInstructions
+            document.querySelector('#ingredients1').innerText = data.drinks[element].strIngredient1 
+            document.querySelector('#ingredients2').innerText = data.drinks[element].strIngredient2
+            document.querySelector('#ingredients3').innerText = data.drinks[element].strIngredient3
+            document.querySelector('#ingredients4').innerText = data.drinks[element].strIngredient4
+            document.querySelector('#ingredients5').innerText = data.drinks[element].strIngredient5
+            document.querySelector('#ingredients6').innerText = data.drinks[element].strIngredient6
+            document.querySelector('#ingredients7').innerText = data.drinks[element].strIngredient7
+            document.querySelector('#ingredients8').innerText = data.drinks[element].strIngredient8
+        }
       console.log(data);
     } catch (error) {
       console.error(error.message);
