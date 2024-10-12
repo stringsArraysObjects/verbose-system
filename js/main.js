@@ -23,7 +23,7 @@ async function getDrink() {
   
       const data = await response.json();
 
-        if (drink === 'rum' || drink === 'vodka' || drink === 'tequila' || drink === 'gin'){
+        if (drink === 'rum' || drink === 'vodka' || drink === 'tequila' || drink === 'gin' || drink === 'wine'){
             let options = '<option>Select</option>'
             const select = document.createElement("select")
             const el = document.querySelector('#search')
