@@ -83,6 +83,7 @@ ul, ol{
 }
 img {
   border-radius: 5%;
+  box-shadow: 5px 5px 5px rgb(56, 56, 55);
 }
 
 .hidden{
